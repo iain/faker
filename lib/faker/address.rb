@@ -70,7 +70,25 @@ module Faker
           '??# #??',
           '??## #??'
         ].rand).upcase
-      end      
+      end
+
+      # NL Variants
+      def nl_postcode
+        Faker.bothify('####??').upcase
+      end
+
+      def nl_city
+        File.readlines(File.dirname(__FILE__) + '/dutch_cities.txt').rand
+      end
+
+      def nl_street_suffix
+        [ "" ] + %w[hof straat laan steeg baan weg markt plein boulevard pad plantsoen gracht straatweg land dreef]
+      end
+
+      def nl_street_name
+        %w[Kerk Dorps Vlinder Cool Roos Klein Groot Thorbecke Apollo Venus Jupiter Mars Baljuw Molenaar Metselaar Schakel Schie Bier Wijn Veer Vee Stations Staten Van\ Oldenbarneveld Prinsen Waal Zee Veerman Denne Juliana Beatrix Willem Alexander Prinsen].rand + nl_street_suffix.rand
+      end
+
     end
   end
 end
