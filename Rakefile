@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('faker', '0.1.0') do |p|
+Echoe.new('faker', '0.4.0') do |p|
   p.description    = "Generate dutch fake data"
   p.url            = "http://github.com/iain/faker"
   p.author         = "Iain Hecker"
