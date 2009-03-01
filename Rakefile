@@ -1,4 +1,14 @@
-require 'config/requirements'
-require 'config/hoe' # setup Hoe + all gem configuration
+require 'rubygems'
+require 'rake'
+require 'echoe'
 
-Dir['tasks/**/*.rake'].each { |rake| load rake }
+Echoe.new('faker', '0.1.0') do |p|
+  p.description    = "Generate dutch fake data"
+  p.url            = "http://github.com/iain/faker"
+  p.author         = "Iain Hecker"
+  p.email          = "iain@iain.nl"
+  p.ignore_pattern = ["tmp/*", "script/*"]
+  p.development_dependencies = []
+end
+
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }

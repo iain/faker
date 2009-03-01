@@ -13,3 +13,11 @@ This is a just simple checkout.
 
 The original SVN repository can be found at:
   svn://rubyforge.org/var/svn/faker/trunk
+
+== This Fork
+
+This is a dutch version, creating dutch names etc.
+
+== Install
+
+  gem install iain-faker
