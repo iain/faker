@@ -19,6 +19,5 @@ test/test_helper.rb
 test/test_faker.rb
 test/test_faker_name.rb
 test/test_faker_internet.rb
-faker.gemspec
 Rakefile
 License.txt
